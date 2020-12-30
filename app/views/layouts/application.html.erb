@@ -11,35 +11,15 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-  <title>RubyGames - serwis aukcyjny dla gamerów</title>
+  <title>RvbyGames - serwis aukcyjny dla gamerów</title>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="<%= root_path %>">RubyGames</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li <% if params[:controller] == "home" && params[:action] == "index" %> class="nav-item active"<% end %>>
-          <a class="nav-link" href="<%= root_path %>">Strona główna</a>
-        </li>
-        <li <% if params[:controller] == "home" && params[:action] == "gry" %> class="nav-item active"<% end %>>
-          <a class="nav-link" href="<%= gry_path %>">Gry</a>
-        </li>
-        <li <% if params[:controller] == "home" && params[:action] == "akcesoria" %> class="nav-item active"<% end %>>
-          <a class="nav-link" href="<%= akcesoria_path %>">Akcesoria</a>
-        </li>
-        <li <% if params[:controller] == "home" && params[:action] == "kontakt" %> class="nav-item active"<% end %>>
-          <a class="nav-link" href="<%= kontakt_path %>">Kontakt</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<%= render 'home/navbar' %>
 <div class="container">
+  <% flash.each do |name, msg| %>
+    <%= content_tag(:div, msg, class: "alert alert-info") %>
+  <% end %>
 
   <%= yield %>
 

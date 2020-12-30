@@ -4,7 +4,10 @@ class HomeController < ApplicationController
   def index
   end
 
-  def about
+  def kontakt
+  end
+
+  def ogloszenia
   end
 
 end

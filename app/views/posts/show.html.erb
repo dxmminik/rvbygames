@@ -1,9 +1,12 @@
-<p id="notice"><%= notice %></p>
-
+<div class="card">
+  <div class="card-header"><h2>Edycja ogłoszenia</h2></div>
+  <div class="card-body">
 <p>
-  <strong>Description:</strong>
+  <strong>Opis ogłoszenia:</strong>
   <%= @post.description %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+  </div>
+  <div class="card-footer"><%= link_to 'Edytuj', edit_post_path(@post) %> |
+    <%= link_to 'Wróc', posts_path %></div>
+</div>

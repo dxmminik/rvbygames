@@ -1,5 +1,9 @@
-<h1>New Post</h1>
+<div class="card">
+  <div class="card-header"><h2>Dodaj nowe ogłoszenie</h2></div>
+  <div class="card-body">
 
 <%= render 'form', post: @post %>
 
-<%= link_to 'Back', posts_path %>
+  </div>
+  <div class="card-footer"><%= link_to 'Wróc', posts_path %></div>
+</div>

@@ -9,5 +9,4 @@ class HomeController < ApplicationController
 
   def ogloszenia
   end
-
 end

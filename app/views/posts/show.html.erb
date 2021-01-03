@@ -7,6 +7,9 @@
 </p>
 
   </div>
-  <div class="card-footer"><%= link_to 'Edytuj', edit_post_path(@post) %> |
+  <div class="card-footer">
+    <% if @post.user == current_user %>
+    <%= link_to 'Edytuj', edit_post_path(@post) %> |
+    <% end %>
     <%= link_to 'Wróc', posts_path %></div>
 </div>

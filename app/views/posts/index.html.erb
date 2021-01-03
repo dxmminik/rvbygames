@@ -14,8 +14,10 @@
       <tr>
         <td><%= post.description %></td>
         <td><%= link_to 'Pokaż', post %></td>
+        <% if post.user == current_user %>
         <td><%= link_to 'Edytuj', edit_post_path(post) %></td>
         <td><%= link_to 'Usuń', post, method: :delete, data: { confirm: 'Czy jesteś pewien?' } %></td>
+          <% end %>
       </tr>
     <% end %>
   </tbody>

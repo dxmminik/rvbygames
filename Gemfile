@@ -5,8 +5,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 gem 'bundler', '~> 2.2.3'
 gem 'devise', '~> 4.7', '>= 4.7.3'
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
 gem 'jbuilder', '~> 2.7'
 gem 'paperclip', '~> 6.1'
 gem 'pg', '~> 1.2.3'

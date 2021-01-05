@@ -6,13 +6,12 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
-s3:
-  service: s3
-  access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
-  secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
-  s3_region: "us-east-2"
-  bucket: "rvbygames"
-  endpoint: "https://rvbygames.s3.amazonaws.com"
+#s3:
+#  service: S3
+#  access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+#  secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+#  region: "us-east-2"
+#  bucket: "rvbygames"
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:

@@ -1,32 +1,20 @@
 <div class="card">
   <div class="card-header"><h2>Dostępne ogłoszenia</h2></div>
   <div class="card-body">
-
-<table>
-  <thead>
-    <tr>
-      <th>Obraz</th>
-      <th>Opis</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
     <% @posts.each do |post| %>
-      <tr>
-        <td><%= image_tag post.image.url(:medium) %></td>
-        <td><%= post.description %></td>
-        <td><%= link_to 'Pokaż', post %></td>
+
+    <div class="card" style="width: 18rem;">
+      <%= image_tag post.image.url(:medium) %>
+      <div class="card-body">
+       <h5> <%= link_to post.description, post %> </h5> <br>
         <% if post.user == current_user %>
-        <td><%= link_to 'Edytuj', edit_post_path(post) %></td>
-        <td><%= link_to 'Usuń', post, method: :delete, data: { confirm: 'Czy jesteś pewien?' } %></td>
+          <%= link_to 'Edytuj', edit_post_path(post) %>
+          <%= link_to 'Usuń', post, method: :delete, data: { confirm: 'Czy jesteś pewien?' } %>
           <% end %>
-      </tr>
+      </div>
+    </div>
+
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
   </div>
   <div class="card-footer"><%= link_to 'Nowe ogłoszenie', new_post_path %></div>
 </div>

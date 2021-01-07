@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   resources :posts
   devise_for :users
-  root 'home#index'
+  root 'posts#index'
   get 'ogloszenia' => 'home#ogloszenia', as: :ogloszenia
   get 'kontakt' => 'home#kontakt', as: :kontakt
   get 'logowanie' => 'devise/sessions#new', as: :logowanie

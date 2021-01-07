@@ -1,0 +1,19 @@
+<div class="row">
+  <% @posts.each do |post| %>
+    <div class="col-sm-2 mb-4">
+      <div class="card text-center h-100">
+        <%= image_tag post.image.url(:medium) %>
+        <div class="card-body">
+          <p class="card-title"><%= link_to post.title, post %></p>
+          <strong><%= post.user.name if post.user %></strong>
+        </div>
+        <% if post.user == current_user %>
+          <div class="card-footer">
+            <%= link_to 'Edytuj', edit_post_path(post) %>
+            <%= link_to 'Usuń', post, method: :delete, data: { confirm: 'Czy jesteś pewien?' } %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

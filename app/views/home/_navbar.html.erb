@@ -8,9 +8,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li <% if params[:controller] == "home" && params[:action] == "index" %> class="nav-item active"<% end %>>
-          <a class="nav-link" href="<%= root_path %>">Strona główna</a>
-        </li>
         <li <% if params[:controller] == "posts" && params[:action] == "index" %> class="nav-item active"<% end %>>
           <a class="nav-link" href="<%= posts_path %>">Ogłoszenia</a>
         </li>

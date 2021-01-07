@@ -16,10 +16,10 @@
   <title>RvbyGames - serwis ogłoszeniowy dla gamerów</title>
   <link rel = "icon" href = "https://icons.getbootstrap.com/icons/gem.svg" type = "image/x-icon">
 </head>
-
 <body>
 <%= render 'home/navbar' %>
-<div class="container">
+
+<div class="container-fluid">
   <% flash.each do |name, msg| %>
     <%= content_tag(:div, msg, class: "alert alert-info") %>
   <% end %>
@@ -27,6 +27,7 @@
   <%= yield %>
 
 </div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

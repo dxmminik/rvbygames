@@ -47,6 +47,6 @@
     <% end %>
   </div>
   <div class="card-footer">
-      <%= button_to "Usuń moje konto", registration_path(resource_name), data: { confirm: "Czy jesteś pewny?" }, method: :delete %>
+    <a class="btn btn-danger" rel="nofollow" data-method="delete" data-confirm="Jesteś pewien?" href="<%= registration_path(resource_name) %>">Usuń konto</a>
   </div>
 </div>

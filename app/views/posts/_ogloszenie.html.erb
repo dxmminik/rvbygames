@@ -1,10 +1,10 @@
 <div class="row">
   <% @posts.each do |post| %>
     <div class="col-sm-2 mb-4">
-      <div class="card text-center h-100 text-white bg-dark">
-        <div class="card-body"><%= image_tag post.image.url, style: 'width:100%;' %></div>
+      <div class="card text-center h-100 text-dark bg-light">
+        <div class="card-body"><%= link_to (image_tag post.image.url, style: 'width:100%;'), post %></div>
         <div class="card-footer">
-          <h5 class="card-title text-wrap font-weight-bold"><%= link_to post.title, post %></h5>
+          <div class="text-link text-wrap font-weight-bold"><%= link_to post.title, post, style: 'color:black;' %></div>
         </div>
         <div class="card-footer">
         <%= post.user.name if post.user %>

@@ -6,9 +6,9 @@
       </div>
       <div class="col-sm-6 text-right">
         <% if @post.user == current_user %>
-          <a href="<%= edit_post_path(@post) %>" class="btn btn-primary" role="button">Edytuj</a>
+          <a href="<%= edit_post_path(@post) %>" class="btn btn-primary" role="button" style="width:100px">Edytuj</a>
         <% end %>
-        <a href="<%= posts_path %>" class="btn btn-primary" role="button">Powrót</a>
+        <a href="<%= posts_path %>" class="btn btn-primary" role="button" style="width:100px">Powrót</a>
       </div>
 
 

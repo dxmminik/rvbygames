@@ -13,17 +13,27 @@
 
   <div class="form-group">
     <h4><%= form.label :title, "Tytuł ogłoszenia" %></h4>
-    <%= form.text_field :title, class: "form-control" %>
+    <%= form.text_field :title, class: "form-control", placeholder: "Tytuł twojej gry" %>
   </div>
 
   <div class="form-group">
     <h4><%= form.label :description, "Opis" %></h4>
-    <%= form.text_area :description, class: "form-control", style: "height:200px" %>
+    <%= form.text_area :description, class: "form-control", style: "height:200px", placeholder: "Parę słów na temat tytułu" %>
+  </div>
+
+  <div class="form-group">
+    <h4><%= form.label :state, "Stan" %></h4>
+    <%= form.text_field :state, class: "form-control", style: "height:43px", placeholder: "Od Uszkodzony do Idealny" %>
+  </div>
+
+  <div class="form-group">
+    <h4><%= form.label :price, "Cena" %></h4>
+    <%= form.text_field :price, class: "form-control", style: "height:43px", value: "zł" %>
     <br>
   </div>
 
   <div class="form-group">
-    <h4><%= form.label :image, "Obraz" %></h4>
+    <h4><%= form.label :image, "Zdjęcie" %></h4>
     <%= form.file_field :image, class: "form-control", style: "height:43px" %>
   </div>
 <br />

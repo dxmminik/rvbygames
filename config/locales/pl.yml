@@ -234,7 +234,8 @@ pl:
     am: przed południem
     formats:
       default: "%a, %-d %b %Y %H:%M:%S %z"
-      long: "%-d %B %Y %H:%M"
+      long: "%Y-%m-%d %H:%M:%S"
       short: "%-d %b %H:%M"
     pm: po południu
+
 

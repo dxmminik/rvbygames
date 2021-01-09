@@ -1,5 +1,17 @@
 RailsAdmin.config do |config|
 
+  #config.authorize_with do
+  #  if user_signed_in?
+  #    redirect_to main_app.root_path unless current_user.id == 5
+  #  else
+  #    redirect_to main_app.root_path
+  #  end
+  #end
+
+  config.authorize_with do
+    redirect_to main_app.root_path unless warden.user.admin == true
+  end
+
   ### Popular gems integration
 
   ## == Devise ==
